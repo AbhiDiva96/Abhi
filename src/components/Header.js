@@ -34,6 +34,15 @@ export const Header = () => {
     setActiveLink(value);
   }
 
+  // const handlePdfButtonClick = () => {
+  //   const pdfLink = '../assets/img/abhiresume.jpg';
+  //   window.open(pdfLink, '_blank');
+
+
+  // }
+   
+  const resumePdfUrl = 'portfolio/src/assets/img/resume.pdf';
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -58,9 +67,9 @@ export const Header = () => {
                 <a href="#"><img src={navIcon3} alt="" /></a>
               </div>
               
-                <button className="vvd"><span><a href="
-                ">Resume </a> </span></button>
-             
+                <button className="vvd" onClick={() => window.open(resumePdfUrl)}>Resume </button>
+                <a href={resumePdfUrl} download="portfolio/src/assets/img/resume.pdf">Download Resume</a>
+
             </span>
           </Navbar.Collapse>
         </Container>

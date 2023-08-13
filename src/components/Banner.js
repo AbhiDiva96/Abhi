@@ -23,6 +23,11 @@ useEffect(() => {
 
 }, [text])
 
+const handlePdfButtonClick = () => {
+      const pdfLink = '../assets/img/resume.pdf';
+      window.open(pdfLink, '_blank');
+}
+
 const tick = () => {
     let i= loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -57,7 +62,7 @@ const tick = () => {
             i am intrested in emerging technology and Artificial Intelligence.
               </p>
               
-              <button className='btn' onClick={() => console.log('connect')}> let's connect <BsArrowRightCircle size={50} /></button>
+              <button className='btn' onClick={() => handlePdfButtonClick}> let's connect <BsArrowRightCircle size={50} /></button>
             </Col>
             <Col xs={12} md={6} xl={5}>
             <img src={headerImg}alt="Header img" />
